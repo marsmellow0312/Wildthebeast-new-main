@@ -8,10 +8,10 @@
   --font-primary: 'Roboto Mono', monospace;
   --font-secondary: 'Roboto Mono', monospace;
   --font-code: "Roboto", monospace;
-  --bg-color: #1c1c20;
+  --bg-color: #000000;
   --bg-color-transparent: #1c1c2080;
-  --font-color: #ffffff;
-  --btn-bg-color: #6a44c6;
+  --font-color: #757575;
+  --btn-bg-color: #8f4000;
   --accent-color: #ffffff;
   --header-shadow: var(--accent-color) -5px 5px 0px;
   --card-shadow: var(--accent-color) -5px 5px 0px;
