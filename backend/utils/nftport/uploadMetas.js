@@ -76,7 +76,7 @@ async function main() {
       "external_url": metaData?.external_url,
       "custom_fields": {
         "date": metaData.date,
-        "compiler": "FU Crypto Club"
+        "compiler": "The Beast Labs"
       }
     }
 
