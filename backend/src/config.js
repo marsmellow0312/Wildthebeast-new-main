@@ -202,7 +202,7 @@ const background = {
 
 const rarityDelimiter = "#";
 
-const uniqueDnaTorrance = 10000;
+const uniqueDnaTorrance = 12000;
 
 const preview = {
   thumbPerRow: 5,
