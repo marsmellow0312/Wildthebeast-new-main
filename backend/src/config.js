@@ -7,7 +7,7 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "WILD THE BEASTS";
+const namePrefix = "WILD THE BEAST";
 const description = "WTB is a collection of 12,000 NFT Beasts a unique digital collection that lives on the Ethereum blockchain. Each character is born from a unique algorithm, the rarer your BEAST trait, will stronger it is in the game. Your The Beast doubles as your in-game Beast Ecosystem membership card, and grants access to member-only benefits, the first of which is access to THE WILD GAME . Future areas and facilities can be unlocked by the community through roadmap activation. Visit www.WildTheBeast.com for more details.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
