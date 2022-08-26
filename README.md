@@ -121,6 +121,10 @@ $ npm run update_base_uri
 $ npm run update_prereveal_token_uri
 ```
 
+update price presale dan public sale di app.js dan index nya untuk max sale
+
+edit dibagian row 
+
 - Updates specific fields of the contract using the settings from the `/backend/src/config.js` file.
 - Available fields to update:
   - `prereveal_token_uri` - This will update the pre-reveal token uri for all NFTs. (Hidden image)
