@@ -161,7 +161,8 @@ async function loadInfo() {
   const subHeading = document.getElementById("subHeading");
   const mainText = document.getElementById("mainText");
   const actionButton = document.getElementById("actionButton");
-  const mintContainer = document.getElementById("mintContainer");
+  const publicMintContainer = document.getElementById("publicMintContainer");
+  const presaleMintContainer = document.getElementById("presaleMintContainer");
   const mintButton = document.getElementById("mintButton");
   const spinner = document.getElementById("spinner");
 
@@ -171,12 +172,13 @@ async function loadInfo() {
     mainText.innerText = p_public_mint;
     actionButton.classList.add('hidden');
     mintButton.innerText = button_public_mint;
-    mintContainer.classList.remove('hidden');
+    publicMintContainer.classList.remove('hidden');
     setTotalPrice();
   } else if (presaleMintActive) {
     startTime = window.info.runtimeConfig.publicMintStart;
     mainHeading.innerText = h1_presale_mint;
     subHeading.innerText = h2_presale_mint;
+    presaleMintContainer.classList.remove('hidden');
     
     try {
       // CHECK IF WHITELISTED
@@ -228,12 +230,14 @@ async function loadInfo() {
     priceType = 'MATIC';
   }
   const price = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether');
-  const pricePerMint = document.getElementById("pricePerMint");
+  const PublicPricePerMint = document.getElementById("PublicPricePerMint");
+  const PreSalePricePerMint = document.getElementById("PreSalePricePerMint");
   const maxPerMint = document.getElementById("maxPerMint");
   const totalSupply = document.getElementById("totalSupply");
   const mintInput = document.getElementById("mintInput");
   
-  pricePerMint.innerText = `${price} ${priceType}`;
+  PublicPricePerMint.innerText = `${price} ${priceType}`;
+  PreSalePricePerMint.innerText = `${price} ${priceType}`;
   maxPerMint.innerText = `${info.deploymentConfig.tokensPerMint}`;
   totalSupply.innerText = `${info.deploymentConfig.maxSupply}`;
   mintInput.setAttribute("max", info.deploymentConfig.tokensPerMint);
