@@ -12,79 +12,63 @@ const description = "WTB is a collection of 12,000 NFT Beasts a unique digital c
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [
+  // {
+  //   growEditionSizeTo: 5,
+  //   layersOrder: [
+  //     { name: "24x24 Pixel" },
+  //   ],
+  // },
+  // {
+  //   growEditionSizeTo: 5,
+  //   layersOrder: [
+  //     { name: "Original" },
+  //   ],
+  // },
+  // {
+  //   growEditionSizeTo: 5,
+  //   layersOrder: [
+  //     { name: "Special" },
+  //   ],
+  // },
+  // {
+  //   growEditionSizeTo: 6572,
+  //   layersOrder: [
+  //     { name: "Background" },
+  //     { name: "Item" },
+  //     { name: "DNA RIP Finger" },
+  //     { name: "Hair" },
+  //     { name: "Clothes" },
+  //     { name: "Hand" },
+  //     { name: "Finger" },
+  //     { name: "Wrist" },
+  //     { name: "Token" },
+  //   ],
+  // },
+  // {
+  //   growEditionSizeTo: 5,
+  //   layersOrder: [
+  //     { name: "Background" },
+  //     { name: "Item" },
+  //     { name: "DNA RIP Hand" },
+  //     { name: "Tattoo" },
+  //     { name: "Nails" },
+  //     { name: "Hand" },
+  //     { name: "Finger" },
+  //     { name: "Wrist" },
+  //     { name: "Token" },
+  //   ],
+  // },
   {
-    growEditionSizeTo: 14,
-    layersOrder: [
-      { name: "24x24 Pixel" },
-    ],
-  },
-  {
-    growEditionSizeTo: 61,
-    layersOrder: [
-      { name: "Original" },
-    ],
-  },
-  {
-    growEditionSizeTo: 72,
-    layersOrder: [
-      { name: "Special" },
-    ],
-  },
-  {
-    growEditionSizeTo: 4072,
+    growEditionSizeTo: 5,
     layersOrder: [
       { name: "Background" },
-      { name: "Item" },
-      { name: "DNA" },
-      { name: "Hair" },
+      { name: "Environment" },
+      { name: "Fur" },
+      { name: "Earring" },
       { name: "Clothes" },
-      { name: "Tattoo" },
-      { name: "Nails" },
-      { name: "Hand" },
-      { name: "Finger" },
-      { name: "Wrist" },
-      { name: "Token" },
-    ],
-  },
-  {
-    growEditionSizeTo: 6572,
-    layersOrder: [
-      { name: "Background" },
-      { name: "Item" },
-      { name: "DNA RIP Finger" },
-      { name: "Hair" },
-      { name: "Clothes" },
-      { name: "Hand" },
-      { name: "Finger" },
-      { name: "Wrist" },
-      { name: "Token" },
-    ],
-  },
-  {
-    growEditionSizeTo: 9072,
-    layersOrder: [
-      { name: "Background" },
-      { name: "Item" },
-      { name: "DNA RIP Hand" },
-      { name: "Tattoo" },
-      { name: "Nails" },
-      { name: "Hand" },
-      { name: "Finger" },
-      { name: "Wrist" },
-      { name: "Token" },
-    ],
-  },
-  {
-    growEditionSizeTo: 10000,
-    layersOrder: [
-      { name: "Background" },
-      { name: "Item" },
-      { name: "DNA Bones" },
-      { name: "Clothes" },
-      { name: "Hand" },
-      { name: "Finger" },
-      { name: "Wrist" },
-      { name: "Token" },
+      { name: "Eyes" },
+      { name: "Hat" },
+      { name: "Mound" },
     ],
   },
 ];
@@ -114,17 +98,17 @@ const CHAIN = 'rinkeby'; // only rinkeby, polygon, or ethereum
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
 const CONTRACT_NAME = 'WILD THE BEAST';
 const CONTRACT_SYMBOL = 'WTB';
-const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
-const OWNER_ADDRESS = '0x7C6019230af7F2C70855eED55A3fB602f56e0Ab5';
+const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
+const OWNER_ADDRESS = '0x627347A67D1538B02B4374a227e6eB18c820D68A';
 const TREASURY_ADDRESS = '0x627347A67D1538B02B4374a227e6eB18c820D68A';
-const MAX_SUPPLY = 12000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const TEAM_RESERVE = 2000; // The number of NFTs that can only be minted by the contract owner for free. CANNOT BE UPDATED!
+const MAX_SUPPLY = 3; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const TEAM_RESERVE = 1; // The number of NFTs that can only be minted by the contract owner for free. CANNOT BE UPDATED!
 const MINT_PRICE = 0.250; // Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const PRESALE_MINT_PRICE = 0.150; // Presale Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const TOKENS_PER_MINT = 100; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-08-22T12:00:00+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-09-01T12:00:00+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PRESALE_MINT_START_DATE = "2022-08-22T12:00:00+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
