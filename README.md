@@ -89,7 +89,7 @@ $ npm run upload_files
 - Uploads all files in the `/backend/build/images` folder.
 
 Upload Metadata: 
-```
+``` 
 $ npm run upload_metadata
 ```
 
