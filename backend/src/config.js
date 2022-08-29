@@ -96,7 +96,7 @@ const LIMIT = 10; // Your API key rate limit
 const CHAIN = 'rinkeby'; // only rinkeby, polygon, or ethereum
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'WILDTHEBEASTS';
+const CONTRACT_NAME = 'WILDTHEBEASTSS';
 const CONTRACT_SYMBOL = 'WTBS';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x627347A67D1538B02B4374a227e6eB18c820D68A';
