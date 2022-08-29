@@ -59,7 +59,7 @@ const layerConfigurations = [
   //   ],
   // },
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 10,
     layersOrder: [
       { name: "Background" },
       { name: "Environment" },
