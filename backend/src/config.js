@@ -101,16 +101,16 @@ const CONTRACT_SYMBOL = 'WTB';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x627347A67D1538B02B4374a227e6eB18c820D68A';
 const TREASURY_ADDRESS = '0x627347A67D1538B02B4374a227e6eB18c820D68A';
-const MAX_SUPPLY = 3; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const TEAM_RESERVE = 1; // The number of NFTs that can only be minted by the contract owner for free. CANNOT BE UPDATED!
+const MAX_SUPPLY = 5000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const TEAM_RESERVE = 500; // The number of NFTs that can only be minted by the contract owner for free. CANNOT BE UPDATED!
 const MINT_PRICE = 0.10; // Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const PRESALE_MINT_PRICE = 0.08; // Presale Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const TOKENS_PER_MINT = 5000; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-08-23T12:00:00+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-10-14:00:00+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PRESALE_MINT_START_DATE = "2022-08-22T12:00:00+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
+const PRESALE_MINT_START_DATE = "2022-10-10T12:00:00+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
 
 const ROYALTY_SHARE = 100; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = "0x627347A67D1538B02B4374a227e6eB18c820D68A"; // Address that will receive the royalty
