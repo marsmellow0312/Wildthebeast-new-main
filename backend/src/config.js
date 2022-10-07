@@ -8,7 +8,7 @@ const network = NETWORK.eth;
 
 // General metadata for Ethereum
 const namePrefix = "WILDTHEBEAST";
-const description = "WTB is a collection of 12,000 NFT Beasts a unique digital collection that lives on the Ethereum blockchain. Each character is born from a unique algorithm, the rarer your BEAST trait, will stronger it is in the game. Your The Beast doubles as your in-game Beast Ecosystem membership card, and grants access to member-only benefits, the first of which is access to THE WILD GAME . Future areas and facilities can be unlocked by the community through roadmap activation. Visit www.WildTheBeast.com for more details.";
+const description = "WTB is a collection of 5.000 NFT Beasts a unique digital collection that lives on the polygon blockchain. Each character is born from a unique algorithm, the rarer your BEAST trait, will stronger it is in the game. Your The Beast doubles as your in-game Beast Ecosystem membership card, and grants access to member-only benefits, the first of which is access to THE WILD GAME . Future areas and facilities can be unlocked by the community through roadmap activation. Visit www.WildTheBeast.com for more details.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [
@@ -59,7 +59,7 @@ const layerConfigurations = [
   //   ],
   // },
   {
-    growEditionSizeTo: 10,
+    growEditionSizeTo: 5000,
     layersOrder: [
       { name: "Background" },
       { name: "Environment" },
@@ -93,27 +93,26 @@ const extraMetadata = {
 // ** REQUIRED **
 const AUTH = process.env.NFTPORT_API_KEY; // Set this in the .env file to prevent exposing your API key when pushing to Github
 const LIMIT = 10; // Your API key rate limit
-const CHAIN = 'rinkeby'; // only rinkeby, polygon, or ethereum
+const CHAIN = 'polygon'; // only rinkeby, polygon, or ethereum
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
 const CONTRACT_NAME = 'WILDTHEBEAST';
-const CONTRACT_SYMBOL = 'WTBS';
+const CONTRACT_SYMBOL = 'WTB';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x627347A67D1538B02B4374a227e6eB18c820D68A';
 const TREASURY_ADDRESS = '0x627347A67D1538B02B4374a227e6eB18c820D68A';
 const MAX_SUPPLY = 3; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
 const TEAM_RESERVE = 1; // The number of NFTs that can only be minted by the contract owner for free. CANNOT BE UPDATED!
-const MINT_PRICE = 0.150; // Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
-const PRESALE_MINT_PRICE = 0.09; // Presale Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
-const TOKENS_PER_MINT = 100; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
-
+const MINT_PRICE = 0.10; // Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const PRESALE_MINT_PRICE = 0.08; // Presale Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const TOKENS_PER_MINT = 5000; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PUBLIC_MINT_START_DATE = "2022-08-23T12:00:00+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PRESALE_MINT_START_DATE = "2022-08-22T12:00:00+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
 
-const ROYALTY_SHARE = 500; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
+const ROYALTY_SHARE = 100; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = "0x627347A67D1538B02B4374a227e6eB18c820D68A"; // Address that will receive the royalty
 const BASE_URI = null; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
@@ -144,7 +143,7 @@ try {
 
 const solanaMetadata = {
   symbol: "WTB",
-  seller_fee_basis_points: 700, // Define how much % you want from secondary market sales 1000 = 10%
+  seller_fee_basis_points: 300, // Define how much % you want from secondary market sales 1000 = 10%
   external_url: "https://wildthebeast.com",
   creators: [
     {
@@ -187,7 +186,7 @@ const background = {
 
 const rarityDelimiter = "#";
 
-const uniqueDnaTorrance = 12000;
+const uniqueDnaTorrance = 5000;
 
 const preview = {
   thumbPerRow: 5,

@@ -1,9 +1,9 @@
 const contractAddress = "0x6c9Ef5a9c7E7cfB152387d736fA07034496FCf67"; // Replace with your own contract address
-const chain = 'rinkeby'; // rinkeby, polygon, or ethereum
+const chain = 'polygon'; // rinkeby, polygon, or ethereum
 
 const welcome_h1 = "Welcome to Wild The Beast zone Project!!";
 const welcome_h2 = "Connect to MetaMask for catch your beasts";
-const welcome_p = 'WTB is a collection of 12,000 NFT Beasts a unique digital collection that lives on the Ethereum blockchain. Each character is born from a unique algorithm, the rarer your BEAST trait, the stronger it is in the game. Your The Beast doubles as your in-game Beast Ecosystem membership card, and grants access to member-only benefits, the first of which is access to THE WILD GAME . Future areas and facilities can be unlocked by the community through roadmap activation. Visit <a href="https://WildTheBeast.com"  target="_blank" rel="noopener noreferrer">WildTheBeast</a> for more details.';
+const welcome_p = 'WTB is a collection of 5,000 NFT Beasts a unique digital collection that lives on the polygon blockchain. Each character is born from a unique algorithm, the rarer your BEAST trait, the stronger it is in the game. Your The Beast doubles as your in-game Beast Ecosystem membership card, and grants access to member-only benefits, the first of which is access to THE WILD GAME . Future areas and facilities can be unlocked by the community through roadmap activation. Visit <a href="https://WildTheBeast.com"  target="_blank" rel="noopener noreferrer">WildTheBeast</a> for more details.';
 const h1_presale_coming_soon = "NFT Drop Coming Soon!!";
 const h1_presale_mint = "Pre-Sale Minting Open!!";
 const h1_public_mint = "Public Minting Open!!";
