@@ -1,5 +1,5 @@
 const contractAddress = "0xD5935b407491E8c0e5684BbABe59ba1D6DEbDbD4"; // Replace with your own contract address
-const chain = 'polygon'; // rinkeby, polygon, or ethereum
+const chain = 'polygon'; // rinkeby = Goerli, polygon, or ethereum 
 
 const welcome_h1 = "Welcome to Wild The Beast zone Project!!";
 const welcome_h2 = "Connect to MetaMask for catch your beasts";
