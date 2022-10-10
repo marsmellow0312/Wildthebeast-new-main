@@ -89,8 +89,8 @@ const updateConnectStatus = async () => {
 
 async function checkChain() {
   let chainId = 0;
-  if(chain === 'rinkeby') {
-    chainId = 4;
+  if(chain === 'goerli') {
+    chainId = 5;
   } else if(chain === 'polygon') {
     chainId = 137;
   } else if(chain === 'ethereum') {
@@ -107,15 +107,15 @@ async function checkChain() {
         // This error code indicates that the chain has not been added to MetaMask.
       if (err.code === 4902) {
         try {
-          if(chain === 'rinkeby') {
+          if(chain === 'goerli') {
             await window.ethereum.request({
               method: 'wallet_addEthereumChain',
               params: [
                 {
-                  chainName: 'Rinkeby Test Network',
+                  chainName: 'Goerli  Test Network',
                   chainId: web3.utils.toHex(chainId),
                   nativeCurrency: { name: 'ETH', decimals: 18, symbol: 'ETH' },
-                  rpcUrls: ['https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'],
+                  rpcUrls: ['https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161'],
                 },
               ],
             });
@@ -222,14 +222,15 @@ async function loadInfo() {
   }, 1000);
 
   let priceType = '';
-  if(chain === 'rinkeby' || chain === 'ethereum') {
+  if(chain === 'goerli' || chain === 'ethereum') {
     priceType = 'ETH';
   } else if (chain === 'polygon') {
     priceType = 'MATIC';
   }
 
+  const price = web3.utils.fromWei(info.deploymentConfig.mintPrice, 'ether');
   //public sale price
-  const price = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether');
+  // const price = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether');
 
   //pre-sale price
   // const price = web3.utils.fromWei(info.runtimeConfig.presaleMintPrice, 'ether');
@@ -290,8 +291,10 @@ function setTotalPrice() {
     mintInput.disabled = true;
     return;
   }
+
+  const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
   //public sale price
-  const totalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
+  // const totalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
 
   //pre-sale price
   // const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
@@ -316,8 +319,9 @@ async function mint() {
 
   const amount = parseInt(document.getElementById("mintInput").value);
 
+  const value = BigInt(info.deploymentConfig.mintPrice) * BigInt(amount);
   //public sale price
-  const value = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(amount);
+  // const value = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(amount);
 
   //pre-sale price
   // const value = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(amount);
@@ -333,7 +337,8 @@ async function mint() {
         .send({ from: window.address, value: value.toString() });
       if(mintTransaction) {
         if(chain === 'polygon') {
-          const url = `https://polygon.etherscan.io/tx/${mintTransaction.transactionHash}`;
+          // const url = `https://ethereum.etherscan.io/tx/${mintTransaction.transactionHash}`;
+          const url = `https://polygon.polygonscan.com/tx/${mintTransaction.transactionHash}`;
           const mintedContainer = document.querySelector('.minted-container');
           const countdownContainer = document.querySelector('.countdown');
           const mintedTxnBtn = document.getElementById("mintedTxnBtn");
@@ -370,7 +375,8 @@ async function mint() {
         .send({ from: window.address, value: value.toString() });
       if(presaleMintTransaction) {
         if(chain === 'polygon') {
-          const url = `https://polygon.etherscan.io/tx/${presaleMintTransaction.transactionHash}`;
+          // const url = `https://ethereum.etherscan.io/tx/${mintTransaction.transactionHash}`;
+          const url = `https://polygon.polygonscan.com/tx/${mintTransaction.transactionHash}`;
           const mintedContainer = document.querySelector('.minted-container');
           const countdownContainer = document.querySelector('.countdown');
           const mintedTxnBtn = document.getElementById("mintedTxnBtn");
