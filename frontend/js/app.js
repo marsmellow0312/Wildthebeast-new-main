@@ -228,12 +228,12 @@ async function loadInfo() {
     priceType = 'MATIC';
   }
 
-  const price = web3.utils.fromWei(info.deploymentConfig.mintPrice, 'ether');
+  // const price = web3.utils.fromWei(info.deploymentConfig.mintPrice, 'ether');
   //public sale price
   // const price = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether');
 
   //pre-sale price
-  // const price = web3.utils.fromWei(info.runtimeConfig.presaleMintPrice, 'ether');
+  const price = web3.utils.fromWei(info.runtimeConfig.presaleMintPrice, 'ether');
 
   const pricePerMint = document.getElementById("pricePerMint");
   const maxPerMint = document.getElementById("maxPerMint");
@@ -292,12 +292,12 @@ function setTotalPrice() {
     return;
   }
 
-  const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
+  // const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
   //public sale price
   // const totalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
 
   //pre-sale price
-  // const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
+  const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
   
   let priceType = '';
   if(chain === 'rinkeby' || chain === 'ethereum') {
@@ -319,12 +319,12 @@ async function mint() {
 
   const amount = parseInt(document.getElementById("mintInput").value);
 
-  const value = BigInt(info.deploymentConfig.mintPrice) * BigInt(amount);
+  // const value = BigInt(info.deploymentConfig.mintPrice) * BigInt(amount);
   //public sale price
   // const value = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(amount);
 
   //pre-sale price
-  // const value = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(amount);
+  const value = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(amount);
 
   const publicMintActive = await contract.methods.mintingActive().call();
   const presaleMintActive = await contract.methods.presaleActive().call();
