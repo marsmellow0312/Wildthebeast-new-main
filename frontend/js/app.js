@@ -93,6 +93,8 @@ async function checkChain() {
     chainId = 5;
   } else if(chain === 'polygon') {
     chainId = 137;
+  } else if(chain === 'Matic TestNet') {
+    chainId = 80001;
   } else if(chain === 'ethereum') {
     chainId = 1;
   }
@@ -138,12 +140,24 @@ async function checkChain() {
                 {
                   chainName: 'Polygon Mainnet',
                   chainId: web3.utils.toHex(chainId),
-                  nativeCurrency: { name: 'MATIC', decimals: 18, symbol: 'MATIC' },
-                  rpcUrls: ['https://polygon-rpc.com/'],
+                  nativeCurrency: { name: 'MATIC', decimals: 137, symbol: 'MATIC' },
+                  rpcUrls: ['https://polygon-rpc.com'],
                 },
               ],
             });
-          }
+          } else if(chain === 'polygon testnet') {
+            await window.ethereum.request({
+              method: 'wallet_addEthereumChain',
+              params: [
+                {
+                  chainName: 'Matic TestNet',
+                  chainId: web3.utils.toHex(chainId),
+                  nativeCurrency: { name: 'MATIC', decimals: 80001, symbol: 'MATIC' },
+                  rpcUrls: ['https://rpc-mumbai.matic.today'],
+                },
+              ],
+            });
+          } 
           updateConnectStatus();
         } catch (err) {
           console.log(err);
