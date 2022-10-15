@@ -141,7 +141,9 @@ async function checkChain() {
                   chainName: 'Polygon Mainnet',
                   chainId: web3.utils.toHex(chainId),
                   nativeCurrency: { name: 'MATIC', decimals: 137, symbol: 'MATIC' },
-                  rpcUrls: ['https://polygon-rpc.com/'],
+                  // rpcUrls: ['https://polygon-rpc.com/'],
+                  pcUrls: ['https://polygon-mainnet.infura.io'],
+                  
                   // rpcUrls: ['https://polygon-mainnet.infura.io/v3/295cce92179b4be498665b1b16dfee34'],
                   
                 },
