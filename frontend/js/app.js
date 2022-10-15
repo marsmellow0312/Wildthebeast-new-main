@@ -355,7 +355,7 @@ async function mint() {
       if(mintTransaction) {
         if(chain === 'polygon') {
           // const url = `https://polygon.etherscan.io/tx/${mintTransaction.transactionHash}`;
-          const url = `https://polygonscan.com/tx/${mintTransaction.transactionHash}`;
+          const url = `https://polygon.polygonscan.com/tx/${mintTransaction.transactionHash}`;
           const mintedContainer = document.querySelector('.minted-container');
           const countdownContainer = document.querySelector('.countdown');
           const mintedTxnBtn = document.getElementById("mintedTxnBtn");
@@ -393,7 +393,7 @@ async function mint() {
       if(presaleMintTransaction) {
         if(chain === 'polygon') {
           // const url = `https://polygon.etherscan.io/tx/${mintTransaction.transactionHash}`;
-          const url = `https://polygonscan.com/tx/${mintTransaction.transactionHash}`;
+          const url = `https://polygon.polygonscan.com/tx/${mintTransaction.transactionHash}`;
           const mintedContainer = document.querySelector('.minted-container');
           const countdownContainer = document.querySelector('.countdown');
           const mintedTxnBtn = document.getElementById("mintedTxnBtn");
