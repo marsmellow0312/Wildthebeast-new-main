@@ -241,15 +241,15 @@ async function loadInfo() {
   if(chain === 'goerli' || chain === 'ethereum') {
     priceType = 'ETH';
   } else if (chain === 'polygon') {
-    priceType = 'MATIC';
+    priceType = 'ETH';
   }
 
   // const price = web3.utils.fromWei(info.deploymentConfig.mintPrice, 'ether');
   //public sale price
-  const price = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'MATIC');
+  // const price = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether');
 
   //pre-sale price
-  // const price = web3.utils.fromWei(info.runtimeConfig.presaleMintPrice, 'ether');
+  const price = web3.utils.fromWei(info.runtimeConfig.presaleMintPrice, 'ether');
 
   const pricePerMint = document.getElementById("pricePerMint");
   const maxPerMint = document.getElementById("maxPerMint");
@@ -310,19 +310,18 @@ function setTotalPrice() {
 
   // const totalPriceWei = BigInt(info.deploymentConfig.mintPrice) * BigInt(mintInputValue);
   //public sale price
-  const totalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
+  // const totalPriceWei = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(mintInputValue);
 
   //pre-sale price
-  // const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
+  const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
   
   let priceType = '';
   if(chain === 'goerli' || chain === 'ethereum') {
     priceType = 'ETH';
   } else if (chain === 'polygon') {
-    priceType = 'MATIC';
+    priceType = 'ETH';
   }
-  // const price = web3.utils.fromWei(totalPriceWei.toString(), 'ether');
-  const price = web3.utils.fromWei(totalPriceWei.toString(), 'MATIC');
+  const price = web3.utils.fromWei(totalPriceWei.toString(), 'ether');
   totalPrice.innerText = `${price} ${priceType}`;
   mintButton.disabled = false;
   mintInput.disabled = false;
@@ -339,10 +338,10 @@ async function mint() {
   // const value = BigInt(info.deploymentConfig.mintPrice) * BigInt(amount);
   
   //public sale price
-  const value = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(amount);
+  // const value = BigInt(info.runtimeConfig.publicMintPrice) * BigInt(amount);
 
   //pre-sale price
-  // const value = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(amount);
+  const value = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(amount);
 
   const publicMintActive = await contract.methods.mintingActive().call();
   const presaleMintActive = await contract.methods.presaleActive().call();
@@ -356,7 +355,7 @@ async function mint() {
       if(mintTransaction) {
         if(chain === 'polygon') {
           // const url = `https://polygon.etherscan.io/tx/${mintTransaction.transactionHash}`;
-          const url = `https://polygonscan.com/tx/${mintTransaction.transactionHash}`;
+          const url = `https://polygon.polygonscan.com/tx/${mintTransaction.transactionHash}`;
           const mintedContainer = document.querySelector('.minted-container');
           const countdownContainer = document.querySelector('.countdown');
           const mintedTxnBtn = document.getElementById("mintedTxnBtn");
@@ -394,7 +393,7 @@ async function mint() {
       if(presaleMintTransaction) {
         if(chain === 'polygon') {
           // const url = `https://polygon.etherscan.io/tx/${mintTransaction.transactionHash}`;
-          const url = `https://polygonscan.com/tx/${mintTransaction.transactionHash}`;
+          const url = `https://polygon.polygonscan.com/tx/${mintTransaction.transactionHash}`;
           const mintedContainer = document.querySelector('.minted-container');
           const countdownContainer = document.querySelector('.countdown');
           const mintedTxnBtn = document.getElementById("mintedTxnBtn");
