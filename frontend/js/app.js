@@ -391,7 +391,7 @@ async function mint() {
       if(presaleMintTransaction) {
         if(chain === 'polygon') {
           // const url = `https://ethereum.etherscan.io/tx/${mintTransaction.transactionHash}`;
-          const url = `https://polygon.polygonscan.com/tx/${mintTransaction.transactionHash}`;
+          const url = `https://matic.polygonscan.com/tx/${mintTransaction.transactionHash}`;
           const mintedContainer = document.querySelector('.minted-container');
           const countdownContainer = document.querySelector('.countdown');
           const mintedTxnBtn = document.getElementById("mintedTxnBtn");
