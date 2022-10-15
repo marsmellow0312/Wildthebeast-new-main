@@ -93,7 +93,7 @@ async function checkChain() {
     chainId = 5;
   } else if(chain === 'polygon') {
     chainId = 137;
-  } else if(chain === 'Matic TestNet') {
+  } else if(chain === 'Mumbai') {
     chainId = 80001;
   } else if(chain === 'ethereum') {
     chainId = 1;
@@ -145,15 +145,15 @@ async function checkChain() {
                 },
               ],
             });
-          } else if(chain === 'polygon testnet') {
+          } else if(chain === 'Mumbai') {
             await window.ethereum.request({
               method: 'wallet_addEthereumChain',
               params: [
                 {
-                  chainName: 'Matic TestNet',
+                  chainName: 'Mumbai',
                   chainId: web3.utils.toHex(chainId),
                   nativeCurrency: { name: 'MATIC', decimals: 80001, symbol: 'MATIC' },
-                  rpcUrls: ['https://rpc-mumbai.matic.today'],
+                  rpcUrls: ['https://matic-mumbai.chainstacklabs.com'],
                 },
               ],
             });
