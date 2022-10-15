@@ -246,7 +246,7 @@ async function loadInfo() {
 
   // const price = web3.utils.fromWei(info.deploymentConfig.mintPrice, 'ether');
   //public sale price
-  const price = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'ether');
+  const price = web3.utils.fromWei(info.runtimeConfig.publicMintPrice, 'MATIC');
 
   //pre-sale price
   // const price = web3.utils.fromWei(info.runtimeConfig.presaleMintPrice, 'ether');
@@ -321,7 +321,8 @@ function setTotalPrice() {
   } else if (chain === 'polygon') {
     priceType = 'MATIC';
   }
-  const price = web3.utils.fromWei(totalPriceWei.toString(), 'ether');
+  // const price = web3.utils.fromWei(totalPriceWei.toString(), 'ether');
+  const price = web3.utils.fromWei(totalPriceWei.toString(), 'MATIC');
   totalPrice.innerText = `${price} ${priceType}`;
   mintButton.disabled = false;
   mintInput.disabled = false;
