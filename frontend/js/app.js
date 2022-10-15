@@ -241,7 +241,7 @@ async function loadInfo() {
   if(chain === 'goerli' || chain === 'ethereum') {
     priceType = 'ETH';
   } else if (chain === 'polygon') {
-    priceType = 'ETH';
+    priceType = 'MATIC';
   }
 
   // const price = web3.utils.fromWei(info.deploymentConfig.mintPrice, 'ether');
@@ -319,7 +319,7 @@ function setTotalPrice() {
   if(chain === 'goerli' || chain === 'ethereum') {
     priceType = 'ETH';
   } else if (chain === 'polygon') {
-    priceType = 'ETH';
+    priceType = 'MATIC';
   }
   const price = web3.utils.fromWei(totalPriceWei.toString(), 'ether');
   totalPrice.innerText = `${price} ${priceType}`;
