@@ -92,7 +92,7 @@ const extraMetadata = {
 
 // ** REQUIRED **
 const AUTH = process.env.NFTPORT_API_KEY; // Set this in the .env file to prevent exposing your API key when pushing to Github
-const LIMIT = 10; // Your API key rate limit
+const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'polygon'; // only rinkeby, polygon, or ethereum or Mumbai
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
@@ -102,10 +102,10 @@ const METADATA_UPDATABLE = true; // set to false if you don't want to allow meta
 const OWNER_ADDRESS = '0x627347A67D1538B02B4374a227e6eB18c820D68A';
 const TREASURY_ADDRESS = '0x627347A67D1538B02B4374a227e6eB18c820D68A';
 const MAX_SUPPLY = 5000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const TEAM_RESERVE = 500; // The number of NFTs that can only be minted by the contract owner for free. CANNOT BE UPDATED!
 const MINT_PRICE = 150.00; // Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const PRESALE_MINT_PRICE = 70.00; // Presale Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const TOKENS_PER_MINT = 5000; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
+const TEAM_RESERVE = 500; // The number of NFTs that can only be minted by the contract owner for free. CANNOT BE UPDATED!
 
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER. 
