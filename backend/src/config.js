@@ -127,7 +127,7 @@ const GENERIC = true; // Set to true if you want to upload generic metas and rev
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
 const GENERIC_DESCRIPTION = "The Beast will be released from the cage once you decide to launch on the wildland"; // Replace with what you want the generic descriptions to say.
 // const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeibncchird2xjlph5vvus72uzdtcmm4t6rmuhxmi5nrsrgir6dlgyu"; // Replace with your generic image that will display for all NFTs pre-reveal.
-const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafkreiadzldcuyw2t7vuzvm23ephb777aewwu6uadmjzav2uc7bjdi6z7m"; // Replace with your generic image that will display for all NFTs pre-reveal.
+const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeibncchird2xjlph5vvus72uzdtcmm4t6rmuhxmi5nrsrgir6dlgyu"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
 try {
