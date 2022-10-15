@@ -92,7 +92,7 @@ async function checkChain() {
   if(chain === 'goerli') {
     chainId = 5;
   } else if(chain === 'polygon') {
-    chainId = 18;
+    chainId = 137;
   } else if(chain === 'Mumbai') {
     chainId = 80001;
   } else if(chain === 'ethereum') {
