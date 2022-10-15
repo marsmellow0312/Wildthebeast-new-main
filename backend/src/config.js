@@ -59,7 +59,7 @@ const layerConfigurations = [
   //   ],
   // },
   {
-    growEditionSizeTo: 5000,
+    growEditionSizeTo: 10,
     layersOrder: [
       { name: "Background" },
       { name: "Environment" },
@@ -96,16 +96,16 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'polygon'; // only rinkeby, polygon, or ethereum or Mumbai
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'WILD THE BEAST';
-const CONTRACT_SYMBOL = 'WTB';
+const CONTRACT_NAME = 'test';
+const CONTRACT_SYMBOL = 'test';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
-const OWNER_ADDRESS = '0x627347A67D1538B02B4374a227e6eB18c820D68A';
-const TREASURY_ADDRESS = '0x627347A67D1538B02B4374a227e6eB18c820D68A';
-const MAX_SUPPLY = 5000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = 150.00; // Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
-const PRESALE_MINT_PRICE = 70.00; // Presale Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
-const TOKENS_PER_MINT = 5000; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
-const TEAM_RESERVE = 500; // The number of NFTs that can only be minted by the contract owner for free. CANNOT BE UPDATED!
+const OWNER_ADDRESS = '0x6F623193a4ec6530b64fBAB62D7Df8F3F9224b55';
+const TREASURY_ADDRESS = '0x6F623193a4ec6530b64fBAB62D7Df8F3F9224b55';
+const MAX_SUPPLY = 10; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const MINT_PRICE = 0.0001; // Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const PRESALE_MINT_PRICE = 0.00001; // Presale Minting price per NFT. Rinkeby = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
+const TEAM_RESERVE = 2; // The number of NFTs that can only be minted by the contract owner for free. CANNOT BE UPDATED!
 
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER. 
@@ -113,10 +113,10 @@ const PUBLIC_MINT_START_DATE = "2022-10-25T11:30:48+00:00"; // This is required.
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PRESALE_MINT_START_DATE = "2022-10-14T11:30:48+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
 const ROYALTY_SHARE = 250; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
-const ROYALTY_ADDRESS = "0x627347A67D1538B02B4374a227e6eB18c820D68A"; // Address that will receive the royalty
+const ROYALTY_ADDRESS = "0x6F623193a4ec6530b64fBAB62D7Df8F3F9224b55"; // Address that will receive the royalty
 const BASE_URI = null; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
-const PRESALE_WHITELISTED_ADDRESSES = ["0x627347A67D1538B02B4374a227e6eB18c820D68A","0x6F623193a4ec6530b64fBAB62D7Df8F3F9224b55","0x96A32235B2b2Db3E2B3178864Da0Ac8f718966d8"]; // only update if you want to manually set the whitelisted addresses
+const PRESALE_WHITELISTED_ADDRESSES = ["0x627347A67D1538B02B4374a227e6eB18c820D68A","0x6F623193a4ec6530b64fBAB62D7Df8F3F9224b55","0x96A32235B2b2Db3E2B3178864Da0Ac8f718966d8","0x6F623193a4ec6530b64fBAB62D7Df8F3F9224b55"]; // only update if you want to manually set the whitelisted addresses
 
 
 // ** OPTIONAL **
@@ -126,7 +126,8 @@ let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually inclu
 const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
 const GENERIC_DESCRIPTION = "The Beast will be released from the cage once you decide to launch on the wildland"; // Replace with what you want the generic descriptions to say.
-const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeibncchird2xjlph5vvus72uzdtcmm4t6rmuhxmi5nrsrgir6dlgyu"; // Replace with your generic image that will display for all NFTs pre-reveal.
+// const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeibncchird2xjlph5vvus72uzdtcmm4t6rmuhxmi5nrsrgir6dlgyu"; // Replace with your generic image that will display for all NFTs pre-reveal.
+const GENERIC_IMAGE = "https://ipfs.io/ipfs/"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
 try {
