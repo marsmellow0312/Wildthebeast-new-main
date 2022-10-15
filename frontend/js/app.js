@@ -141,7 +141,7 @@ async function checkChain() {
                   chainName: 'Polygon Mainnet',
                   chainId: web3.utils.toHex(chainId),
                   nativeCurrency: { name: 'MATIC', decimals: 137, symbol: 'MATIC' },
-                  rpcUrls: ['https://polygon-rpc.com'],
+                  rpcUrls: ['https://polygon-rpc.com/'],
                 },
               ],
             });
@@ -314,7 +314,7 @@ function setTotalPrice() {
   const totalPriceWei = BigInt(info.runtimeConfig.presaleMintPrice) * BigInt(mintInputValue);
   
   let priceType = '';
-  if(chain === 'rinkeby' || chain === 'ethereum') {
+  if(chain === 'goerli' || chain === 'ethereum') {
     priceType = 'ETH';
   } else if (chain === 'polygon') {
     priceType = 'MATIC';
