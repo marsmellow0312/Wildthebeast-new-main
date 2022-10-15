@@ -140,9 +140,10 @@ async function checkChain() {
                 {
                   chainName: 'Polygon Mainnet',
                   chainId: web3.utils.toHex(chainId),
-                  nativeCurrency: { name: 'MATIC', decimals: 137, symbol: 'MATIC' },
-                  // rpcUrls: ['https://polygon-rpc.com/'],
-                  rpcUrls: ['https://polygon-mainnet.infura.io/v3/295cce92179b4be498665b1b16dfee34'],
+                  nativeCurrency: { name: 'MATIC', decimals: 18, symbol: 'MATIC' },
+                  rpcUrls: ['https://polygon-rpc.com/'],
+                  // rpcUrls: ['https://polygon-mainnet.infura.io/v3/295cce92179b4be498665b1b16dfee34'],
+                  
                 },
               ],
             });
@@ -392,7 +393,7 @@ async function mint() {
       if(presaleMintTransaction) {
         if(chain === 'polygon') {
           // const url = `https://ethereum.etherscan.io/tx/${mintTransaction.transactionHash}`;
-          const url = `https://matic.polygonscan.com/tx/${mintTransaction.transactionHash}`;
+          const url = `https://polygon.polygonscan.com/tx/${mintTransaction.transactionHash}`;
           const mintedContainer = document.querySelector('.minted-container');
           const countdownContainer = document.querySelector('.countdown');
           const mintedTxnBtn = document.getElementById("mintedTxnBtn");
